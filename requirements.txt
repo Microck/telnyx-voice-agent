@@ -1,0 +1,21 @@
+# AI Voice Agent - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core Framework
+pipecat-ai[google,twilio,websocket]
+
+# Web Framework
+fastapi
+uvicorn[standard]
+
+# Twilio REST API Client
+twilio
+
+# Environment Variables
+python-dotenv
+
+# Form parsing
+python-multipart
+
+# Async support
+aiohttp

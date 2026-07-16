@@ -1,0 +1,110 @@
+[
+  {
+    "question": "What is TechNova Solutions?",
+    "answer": "TechNova Solutions is a leading AI technology company that specializes in building intelligent voice assistants, chatbots, and automation solutions for businesses. We help companies transform their customer experience through cutting-edge AI technology.",
+    "keywords": ["technova", "company", "about", "who"],
+    "category": "Company Info"
+  },
+  {
+    "question": "What services does TechNova offer?",
+    "answer": "TechNova offers three main services: AI Voice Agents for phone-based customer support, Intelligent Chatbots for web and messaging platforms, and Business Process Automation using AI workflows. We also offer custom AI development and consulting services.",
+    "keywords": ["services", "offer", "provide", "products"],
+    "category": "Services"
+  },
+  {
+    "question": "What are your pricing plans?",
+    "answer": "We offer three pricing tiers: Starter Plan at $99 per month for up to 1000 conversations, Professional Plan at $299 per month for up to 5000 conversations with priority support, and Enterprise Plan with custom pricing for unlimited conversations and dedicated support. All plans include a 14-day free trial.",
+    "keywords": ["pricing", "cost", "price", "plan", "plans", "how much", "subscription", "fee"],
+    "category": "Pricing"
+  },
+  {
+    "question": "Do you offer a free trial?",
+    "answer": "Yes, we offer a 14-day free trial on all plans. No credit card required. You can start building and testing your AI agents immediately. After the trial, you can choose the plan that best fits your needs.",
+    "keywords": ["free trial", "trial", "free", "try", "demo"],
+    "category": "Pricing"
+  },
+  {
+    "question": "What are your operating hours?",
+    "answer": "Our office hours are Monday to Friday, 9 AM to 6 PM Indian Standard Time. However, our AI agents and support chatbots are available 24/7. For urgent technical issues, we provide round-the-clock support for Professional and Enterprise plan customers.",
+    "keywords": ["hours", "operating hours", "working hours", "open", "available", "time", "office"],
+    "category": "Support"
+  },
+  {
+    "question": "How can I contact support?",
+    "answer": "You can reach our support team through email at support@technova.ai, by phone at +91-484-555-0100, or through the live chat on our website. Professional and Enterprise customers also get access to a dedicated Slack channel for direct communication with our engineering team.",
+    "keywords": ["contact", "support", "help", "email", "phone", "reach", "talk"],
+    "category": "Support"
+  },
+  {
+    "question": "What languages do your AI agents support?",
+    "answer": "Our AI voice agents support over 30 languages including English, Hindi, Malayalam, Tamil, Telugu, Kannada, Bengali, Spanish, French, German, Japanese, and Mandarin Chinese. We can also add support for additional languages based on your requirements.",
+    "keywords": ["languages", "language", "multilingual", "english", "hindi", "malayalam", "support"],
+    "category": "Features"
+  },
+  {
+    "question": "What is your refund policy?",
+    "answer": "We offer a 30-day money-back guarantee on all paid plans. If you're not satisfied with our service within the first 30 days, we'll provide a full refund, no questions asked. After 30 days, you can cancel anytime and your service will continue until the end of your billing period.",
+    "keywords": ["refund", "money back", "cancel", "cancellation", "return"],
+    "category": "Policies"
+  },
+  {
+    "question": "How does the AI voice agent work?",
+    "answer": "Our AI voice agent uses advanced speech-to-speech technology. When a call comes in or is made, the AI listens to the caller in real-time, understands their intent, and responds naturally with a human-like voice. It can handle complex conversations, remember context throughout the call, and even perform actions like booking appointments or looking up information.",
+    "keywords": ["how", "work", "technology", "voice agent", "ai agent", "function"],
+    "category": "Features"
+  },
+  {
+    "question": "Can I customize the AI agent's personality?",
+    "answer": "Absolutely! You can fully customize your AI agent's personality, tone, and behavior through our system prompt configuration. You can make it formal or casual, set its name, define its expertise areas, and even specify how it should handle different types of conversations. Our Professional and Enterprise plans include access to our prompt engineering team for help with optimization.",
+    "keywords": ["customize", "personality", "configure", "custom", "prompt", "tone", "behavior"],
+    "category": "Features"
+  },
+  {
+    "question": "What integrations do you support?",
+    "answer": "We integrate with major platforms including Twilio for telephony, WhatsApp Business, Facebook Messenger, Slack, Microsoft Teams, Salesforce, HubSpot, Zendesk, and custom APIs via webhooks. We also support integration with popular CRM and helpdesk tools.",
+    "keywords": ["integration", "integrations", "connect", "twilio", "whatsapp", "crm", "platform"],
+    "category": "Features"
+  },
+  {
+    "question": "Is my data secure?",
+    "answer": "Yes, we take data security very seriously. All data is encrypted in transit and at rest using AES-256 encryption. We are SOC 2 Type II certified and GDPR compliant. We never share your data with third parties, and you can request data deletion at any time. Our Enterprise plan includes options for on-premise deployment.",
+    "keywords": ["security", "secure", "data", "privacy", "encryption", "gdpr", "compliance", "safe"],
+    "category": "Security"
+  },
+  {
+    "question": "How do I get started?",
+    "answer": "Getting started is easy! Visit our website at technova.ai, click 'Start Free Trial', and create your account. You'll be guided through a simple setup wizard to configure your first AI agent. The entire process takes about 15 minutes. You can also book a demo call with our team for a personalized walkthrough.",
+    "keywords": ["get started", "start", "begin", "setup", "sign up", "register", "create account"],
+    "category": "Getting Started"
+  },
+  {
+    "question": "Where is TechNova located?",
+    "answer": "TechNova Solutions is headquartered in Kochi, Kerala, India. We also have offices in Bangalore and a remote team across India and the United States. We serve customers globally across 15 countries.",
+    "keywords": ["location", "located", "where", "office", "address", "headquarters", "kochi", "kerala"],
+    "category": "Company Info"
+  },
+  {
+    "question": "Do you provide training or onboarding?",
+    "answer": "Yes! All plans include access to our comprehensive documentation and video tutorials. Professional plan customers get a dedicated onboarding session, and Enterprise customers receive a full training program for their team, including workshops on prompt engineering and AI best practices.",
+    "keywords": ["training", "onboarding", "learn", "tutorial", "documentation", "docs", "workshop"],
+    "category": "Support"
+  },
+  {
+    "question": "What is the uptime guarantee?",
+    "answer": "We guarantee 99.9% uptime on our Professional and Enterprise plans. Our infrastructure is hosted on multiple cloud providers with automatic failover. In the rare event of downtime, we provide service credits as outlined in our SLA.",
+    "keywords": ["uptime", "reliability", "downtime", "sla", "guarantee", "available"],
+    "category": "Features"
+  },
+  {
+    "question": "Can the AI agent book appointments?",
+    "answer": "Yes, our AI agents can book appointments, schedule meetings, and manage calendars when integrated with your scheduling system. We support integration with Google Calendar, Outlook Calendar, Calendly, and custom booking systems via API.",
+    "keywords": ["appointment", "book", "booking", "schedule", "calendar", "meeting"],
+    "category": "Features"
+  },
+  {
+    "question": "What happens when the AI can't answer a question?",
+    "answer": "When the AI encounters a question it cannot confidently answer, it gracefully transfers the call to a human agent. You can configure the escalation rules, including which types of questions should be escalated and to which team member. The AI provides the human agent with a summary of the conversation for seamless handoff.",
+    "keywords": ["cannot answer", "escalation", "transfer", "human agent", "fallback", "handoff"],
+    "category": "Features"
+  }
+]
