@@ -15,22 +15,13 @@ A real-time AI voice agent prototype that makes outbound phone calls and conduct
 
 ## 🏗️ Architecture
 
-```
-┌──────────────┐       ┌──────────────────┐       ┌─────────────────┐
-│              │  PSTN  │                  │  WSS  │                 │
-│  Phone User  │◄──────►│  Twilio Voice    │◄─────►│  FastAPI Server │
-│              │       │  (Media Streams)  │       │  (Pipecat)      │
-└──────────────┘       └──────────────────┘       └────────┬────────┘
-                                                           │
-                                                           │ WebSocket
-                                                           ▼
-                                                  ┌─────────────────┐
-                                                  │  Gemini Live    │
-                                                  │  API            │
-                                                  │  (Speech-to-    │
-                                                  │   Speech)       │
-                                                  └─────────────────┘
-```
+The AI Voice Agent uses an event-driven, real-time voice pipeline built on FastAPI and the Pipecat framework. 
+
+* **Telephony Integration**: Twilio Voice connects the phone call to our FastAPI server using standard WebSockets (via Twilio Media Streams).
+* **Audio Processing & VAD**: The Pipecat voice pipeline receives the stream, executes Voice Activity Detection (VAD) locally using the Silero model, and manages bidirectional turn-taking.
+* **Brain (LLM & Tools)**: Audio frames are routed to/from the Gemini Live API, which acts as the core brain. Gemini handles low-latency speech-to-speech interaction and dynamically invokes tools (like date/time lookup and the local FAQ knowledge base) when needed.
+
+![Architecture Diagram](architecture.svg)
 
 ### Data Flow
 1. **Outbound Call**: FastAPI triggers Twilio REST API → Twilio calls the user
@@ -246,3 +237,15 @@ AI_Voice_Assistant/
 - [Twilio Voice](https://www.twilio.com/docs/voice)
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [ngrok](https://ngrok.com/docs)
+│  Phone User  │◄──────►│  Twilio Voice    │◄─────►│  FastAPI Server │
+│              │       │  (Media Streams)  │       │  (Pipecat)      │
+└──────────────┘       └──────────────────┘       └────────┬────────┘
+                                                           │
+                                                           │ WebSocket
+                                                           ▼
+                                                  ┌─────────────────┐
+                                                  │  Gemini Live    │
+                                                  │  API            │
+                                                  │  (Speech-to-    │
+                                                  │   Speech)       │
+                                                  └─────────────────┘
