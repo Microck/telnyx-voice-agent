@@ -33,6 +33,15 @@ def api_context() -> tuple[str, str]:
     api_key = env.get("CALL_API_KEY", "")
     if not api_key:
         raise RuntimeError(f"CALL_API_KEY is missing from {project / '.env'}")
+    runtime_file = project / ".agent-runtime.json"
+    if runtime_file.is_file():
+        try:
+            runtime = json.loads(runtime_file.read_text(encoding="utf-8"))
+            base_url = runtime.get("web", "")
+            if base_url:
+                return base_url, api_key
+        except (json.JSONDecodeError, OSError):
+            pass
     port = env.get("APP_PUBLIC_PORT", "48611")
     return f"http://127.0.0.1:{port}", api_key
 

@@ -100,7 +100,7 @@ def make_outbound_call(
     to_number: str,
     task: str,
     language: str,
-    max_duration_seconds: int = 300,
+    max_duration_seconds: int = 600,
     opening_line: str | None = None,
     request_id: str | None = None,
 ) -> str:

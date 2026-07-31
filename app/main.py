@@ -96,7 +96,7 @@ class StartCallRequest(BaseModel):
     to_number: str | None = Field(default=None, pattern=r"^\+[1-9]\d{7,14}$")
     task: Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=2000)]
     language: Literal["es-ES", "en-US"] | None = None
-    max_duration_seconds: int = Field(default=300, ge=30, le=3600)
+    max_duration_seconds: int = Field(default=600, ge=30, le=3600)
     opening_line: Annotated[
         str | None,
         StringConstraints(strip_whitespace=True, min_length=1, max_length=300),

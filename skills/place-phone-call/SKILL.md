@@ -22,11 +22,11 @@ an explicit request such as "call", "phone", or "try again" as authorization
 to place that call. A hypothetical question or draft is not authorization.
 
 Use Spanish from Spain for `+34` numbers and English for other country codes,
-unless the operator specifies another language. Use these cost-aware limits:
+unless the operator specifies another language. Use these duration limits:
 
-- 90 seconds for a short message or simple question
-- 180 seconds for a reservation or routine request
-- 300 seconds for a dispute or complex task
+- 300 seconds for a short message or simple question
+- 600 seconds for a reservation or routine request
+- 900 seconds for a dispute or complex task
 
 Preserve exact wording when the operator says to say something exactly. Otherwise,
 write a concise task that states the goal and completion condition.
