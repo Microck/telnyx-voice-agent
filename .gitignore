@@ -52,3 +52,9 @@ ngrok.exe
 extract_docx.ps1
 ai_call_text.txt
 understanding.md
+.env.docker.auto
+.agent-runtime.json
+.cloudflared.pid
+.cloudflared.log
+config/personal-knowledge.md
+config/sensitive-knowledge.md

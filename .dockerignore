@@ -1,0 +1,23 @@
+# ignore local env files and local caches
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.local
+.env.docker.auto
+.agent-runtime.json
+.cloudflared.pid
+.cloudflared.log
+.git
+.gitignore
+.pytest_cache
+.mypy_cache
+.idea
+.vscode
+.DS_Store
+*.log
+config/personal-knowledge.md
+config/sensitive-knowledge.md

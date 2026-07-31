@@ -1,0 +1,66 @@
+services:
+  call-data-init:
+    image: python:3.11-slim
+    command:
+      - sh
+      - -c
+      - chown -R 10001:10001 /app/data
+    volumes:
+      - call-data:/app/data
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
+
+  ai-voice-agent:
+    build:
+      context: .
+    image: ai-voice-agent:latest
+    container_name: ai-voice-agent
+    depends_on:
+      call-data-init:
+        condition: service_completed_successfully
+    env_file:
+      - .env
+    ports:
+      - "${APP_BIND_ADDRESS:-127.0.0.1}:${APP_PUBLIC_PORT:-48611}:8000"
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m,mode=1777
+    volumes:
+      - call-data:/app/data
+      - ./config/personal-knowledge.md:/app/config/personal-knowledge.md:ro
+      - ./config/sensitive-knowledge.md:/app/config/sensitive-knowledge.md:ro
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    stop_grace_period: 30s
+
+  cloudflared:
+    image: cloudflare/cloudflared:2026.7.0
+    profiles:
+      - tunnel
+    command:
+      - tunnel
+      - --no-autoupdate
+      - run
+      - --token
+      - ${CLOUDFLARE_TUNNEL_TOKEN:-}
+    depends_on:
+      ai-voice-agent:
+        condition: service_healthy
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+
+volumes:
+  call-data:

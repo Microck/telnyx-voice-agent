@@ -1,21 +1,21 @@
 # AI Voice Agent - Dependencies
 # Install with: pip install -r requirements.txt
 
-# Core Framework
-pipecat-ai[google,twilio,websocket]
-
 # Web Framework
-fastapi
-uvicorn[standard]
+fastapi==0.141.1
+uvicorn[standard]==0.52.0
 
-# Twilio REST API Client
-twilio
+# Telnyx Python SDK
+telnyx==4.170.0
 
 # Environment Variables
-python-dotenv
+python-dotenv==1.2.2
 
 # Form parsing
-python-multipart
+python-multipart==0.0.32
 
 # Async support
-aiohttp
+aiohttp==3.14.3
+
+# Telnyx webhook signature verification
+cryptography==49.0.0
